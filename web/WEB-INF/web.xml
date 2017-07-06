@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <session-config>
+        <!--设置session的有效时间-->
+        <session-timeout>10</session-timeout>
+    </session-config>
+    <display-name></display-name>
+    <servlet>
+        <servlet-name>carts</servlet-name>
+        <servlet-class>com.ZJ.servlet.cart</servlet-class>
+    </servlet>
+<servlet>
+    <servlet-name>showCart</servlet-name>
+    <servlet-class>com.ZJ.servlet.showCart</servlet-class>
+</servlet>
+    <servlet>
+        <servlet-name>addCart</servlet-name>
+        <servlet-class>com.ZJ.servlet.addCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>carts</servlet-name>
+        <url-pattern>/servlet/cart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addCart</servlet-name>
+        <url-pattern>/servlet/addCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>showCart</servlet-name>
+        <url-pattern>/servlet/showCart</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>demo1</servlet-name>
+        <servlet-class>com.ZJ.show.SessionDemo1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo1</servlet-name>
+        <url-pattern>/servlet/SessionDemo1</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SessionDemo2</servlet-name>
+        <servlet-class>com.ZJ.show.SessionDemo2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionDemo2</servlet-name>
+        <url-pattern>/servlet/SessionDemo2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>login</servlet-name>
+    <servlet-class>com.ZJ.show.Login</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/servlet/login</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>doLogin</servlet-name>
+    <servlet-class>com.ZJ.show.DoLogin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doLogin</servlet-name>
+        <url-pattern>/servlet/doLogin</url-pattern>
+    </servlet-mapping>
+<servlet>
+    <servlet-name>registerSerrlet</servlet-name>
+    <servlet-class>com.ZJ.Register.RegisterServlet</servlet-class>
+</servlet>
+    <servlet-mapping>
+        <servlet-name>registerSerrlet</servlet-name>
+        <url-pattern>/servlet/registerSerlet</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
